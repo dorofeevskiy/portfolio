@@ -1,0 +1,17 @@
+/* Shared section rhythm, including the first visible row of each floor. */
+:root{--section-space:64px}
+#services.section,#projects .projects-stage,#about .about-stage,#contact.section{
+  padding-block:var(--section-space);
+}
+#services.section,#about .about-stage{min-height:0}
+#about .about-stage{align-content:start}
+#about .about-copy{align-self:start}
+#contact.section{justify-content:flex-start}
+#contact .contact-copy{padding-bottom:0}
+#contact .contact-portrait{bottom:0}
+@media(max-width:900px){:root{--section-space:48px}}
+@media(max-width:600px){
+  :root{--section-space:40px}
+  #contact .contact-copy{order:0}
+  #contact .contact-portrait{order:1;margin:32px auto 0}
+}
